@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-fron flatbond_app import views as v
+from flatbond_app import views as v
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^config/<client_id>)', v.flatbond_detail, name='flatbond_detail'),
+    url(r'^config/<client_id>', v.flatbond_detail, name='flatbond_detail'),
     url(r'^config/', v.index, name='index')
 ]
